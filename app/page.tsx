@@ -12,9 +12,32 @@ export default function Home() {
   const [phone, setPhone] = useState<string>('');
 
 
-  const handleRSVP = () => {
-    setSubmitted(true);
+  const handleRSVP = async () => {
+  const data = {
+    data: {
+      name,
+      email,
+      phone,
+      guests,
+      message,
+    }
   };
+
+  const response = await fetch("https://sheetdb.io/api/v1/4vb64lnusxxmu", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (response.ok) {
+    setSubmitted(true);
+  } else {
+    alert("There was an error submitting your RSVP.");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-pink-100 to-purple-200 flex flex-col items-center justify-center p-4 text-gray-800">
