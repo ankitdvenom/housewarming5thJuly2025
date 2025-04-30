@@ -10,12 +10,12 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🍽 Food Menu</h2>
-          <p>We’ll be serving both vegetarian and non-veg options including buffet and desserts. Full list will be updated here closer to the event.</p>
+          <p>Stay tuned..</p>
         </div>
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
-          <p>Street parking is available nearby. We’ll add specific instructions or a map soon to help you plan easily.</p>
+          <p>Street parking is available on the other side of the street</p>
         </div>
 
         <div className="mb-8">
