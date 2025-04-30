@@ -24,7 +24,7 @@ export default function Home() {
       },
     };
 
-    const response = await fetch("https://sheetdb.io/api/v1/4vb64lnusxxmu", {
+    const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
