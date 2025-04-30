@@ -46,7 +46,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Welcome to our <span className="block text-6xl italic">New Home</span>
+        Welcome to our New Home</span>
       </motion.h1>
       <Image
         src="/house.png"
