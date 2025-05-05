@@ -18,7 +18,6 @@ export default function Home() {
     try {
       const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
       const entries = await response.json();
-
       return entries.some(
         (entry: any) => entry.email === email || entry.phone === phone
       );
@@ -33,10 +32,12 @@ export default function Home() {
       alert("Please let us know if you will join us.");
       return;
     }
+
     if (!/^[0-9]{10}$/.test(phone)) {
       alert("Please enter a valid 10-digit phone number.");
       return;
     }
+
     const isDuplicate = await checkDuplicate();
     if (isDuplicate) {
       alert("You’ve already RSVPed with this email or phone number.");
@@ -113,13 +114,13 @@ export default function Home() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-           <input
+            <input
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="e.g. 0444567890"
               type="tel"
+              maxLength={10}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              maxLength={10}
             />
             <input
               className="w-full p-2 border border-[#ccc] rounded"
