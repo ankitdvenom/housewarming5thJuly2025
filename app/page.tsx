@@ -32,10 +32,6 @@ export default function Home() {
       alert("Please fill in all the required fields before submitting your RSVP.");
       return;
     }
-    if (!joining) {
-      alert("Please let us know if you will join us.");
-      return;
-    }
 
     if (!/^[0-9]{10}$/.test(phone)) {
       alert("Please enter a valid 10-digit phone number.");
@@ -110,6 +106,7 @@ export default function Home() {
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               className="w-full p-2 border border-[#ccc] rounded"
@@ -117,24 +114,33 @@ export default function Home() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <<input
+            <input
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="e.g. 0444567890"
               type="text"
-              pattern="[0-9]{10}"
-              maxLength={10}
               inputMode="numeric"
+              maxLength={10}
               value={phone}
-              onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ""))}
+              onChange={(e) => {
+                const onlyDigits = e.target.value.replace(/[^0-9]/g, "");
+                setPhone(onlyDigits);
+              }}
+              required
             />
-
-            <input
+            <select
               className="w-full p-2 border border-[#ccc] rounded"
-              placeholder="Number of Guests"
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
-            />
+              required
+            >
+              <option value="">Number of Guests</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
             <select
               className="w-full p-2 border border-[#ccc] rounded"
               value={joining}
