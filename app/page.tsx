@@ -20,7 +20,7 @@ export default function Home() {
       const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
       const entries = await response.json();
       return entries.some(
-        (entry: any) => entry.email === email || entry.phone === phone
+        (entry: any) => entry.email.trim().toLowerCase() === email.trim().toLowerCase() || entry.phone.trim() === phone.trim()
       );
     } catch (error) {
       console.error("Error checking duplicates:", error);
