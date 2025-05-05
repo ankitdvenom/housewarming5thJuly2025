@@ -128,6 +128,12 @@ export default function Home() {
           >
             Thank you for RSVPing! We can’t wait to see you! 💚
           </motion.div>
+          {submitted && (
+            <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
+            → View RSVP List
+            </Link>
+)}
+
         )}
       </div>
 
