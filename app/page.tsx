@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const [joining, setJoining] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,14 +16,15 @@ export default function Home() {
 
   const handleRSVP = async () => {
     const data = {
-      data: {
-        name,
-        email,
-        phone,
-        guests,
-        message,
-      },
-    };
+  data: {
+    name,
+    email,
+    phone,
+    guests,
+    message,
+    joining
+  }
+};
 
     const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
       method: "POST",
@@ -96,6 +98,15 @@ export default function Home() {
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
             />
+            <select
+              className="w-full p-2 border border-[#ccc] rounded"
+              value={joining}
+              onChange={(e) => setJoining(e.target.value)}
+            >
+              <option value="">Will you join us?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
             <textarea
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="Leave us a message (optional)"
