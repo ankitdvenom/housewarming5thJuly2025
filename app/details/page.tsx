@@ -10,12 +10,12 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🍽 Food Menu</h2>
-          <p>Stay tuned..</p>
+          <p>We’ll be serving both vegetarian and non-veg options including buffet and desserts. Full list will be updated here closer to the event.</p>
         </div>
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
-          <p>Street parking is available on the other side of the street</p>
+          <p>Street parking is available nearby. We’ll add specific instructions or a map soon to help you plan easily.</p>
         </div>
 
         <div className="mb-8">
@@ -25,6 +25,10 @@ export default function DetailsPage() {
 
         <Link href="/" className="mt-6 inline-block text-blue-700 underline">
           ← Back to Invite Page
+        </Link>
+        <br />
+        <Link href="/rsvp-list" className="mt-2 inline-block text-blue-700 underline">
+          → View RSVP List
         </Link>
       </div>
     </div>
