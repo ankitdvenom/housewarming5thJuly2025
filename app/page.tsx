@@ -16,19 +16,20 @@ export default function Home() {
 
   const handleRSVP = async () => {
     if (!joining) {
-    alert("Please let us know if you will join us.");
-    return;
-  }
+      alert("Please let us know if you will join us.");
+      return;
+    }
+
     const data = {
-  data: {
-    name,
-    email,
-    phone,
-    guests,
-    message,
-    joining
-  }
-};
+      data: {
+        name,
+        email,
+        phone,
+        guests,
+        message,
+        joining,
+      }
+    };
 
     const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
       method: "POST",
@@ -126,25 +127,19 @@ export default function Home() {
             </button>
           </div>
         ) : (
-  <>
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="text-center text-green-700 font-semibold"
-    >
-      Thank you for RSVPing! We can’t wait to see you! 💚
-    </motion.div>
-    <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
-      → View RSVP List
-    </Link>
-  </>
-)
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center text-green-700 font-semibold"
+            >
+              Thank you for RSVPing! We can’t wait to see you! 💚
+            </motion.div>
+            <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
+              → View RSVP List
+            </Link>
+          </>
         )}
-          {submitted && (
-    <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
-      → View RSVP List
-    </Link>
-  )}
       </div>
 
       <div className="text-sm text-center mb-10">
