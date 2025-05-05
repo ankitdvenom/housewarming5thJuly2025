@@ -28,6 +28,10 @@ export default function Home() {
   };
 
   const handleRSVP = async () => {
+    if (!name || !email || !phone || !guests || !joining) {
+      alert("Please fill in all the required fields before submitting your RSVP.");
+      return;
+    }
     if (!joining) {
       alert("Please let us know if you will join us.");
       return;
