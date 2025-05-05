@@ -15,7 +15,7 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
-          <p>Street parking is accross the street.</p>
+          <p>Street parking is available accross the street.</p>
         </div>
 
         <div className="mb-8">
