@@ -10,7 +10,7 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🍽 Food Menu</h2>
-          <p>We’ll be sharing the menu towards the end of the event</p>
+          <p>We’ll be sharing the menu closer to event date, so stay tuned!</p>
         </div>
 
         <div className="mb-8">
