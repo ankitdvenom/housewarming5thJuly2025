@@ -121,20 +121,25 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center text-green-700 font-semibold"
-          >
-            Thank you for RSVPing! We can’t wait to see you! 💚
-          </motion.div>
-          {submitted && (
-            <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
-            → View RSVP List
-            </Link>
-)}
-
+  <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="text-center text-green-700 font-semibold"
+    >
+      Thank you for RSVPing! We can’t wait to see you! 💚
+    </motion.div>
+    <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
+      → View RSVP List
+    </Link>
+  </>
+)
         )}
+          {submitted && (
+    <Link href="/rsvp-list" className="text-blue-700 underline text-center block my-4">
+      → View RSVP List
+    </Link>
+  )}
       </div>
 
       <div className="text-sm text-center mb-10">
