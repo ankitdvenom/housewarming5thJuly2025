@@ -13,6 +13,7 @@ export default function Home() {
   const [guests, setGuests] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const checkDuplicate = async () => {
     try {
@@ -38,9 +39,12 @@ export default function Home() {
       return;
     }
 
+    setLoading(true);
+
     const isDuplicate = await checkDuplicate();
     if (isDuplicate) {
       alert("You’ve already RSVPed with this email or phone number.");
+      setLoading(false);
       return;
     }
 
@@ -68,6 +72,7 @@ export default function Home() {
     } else {
       alert("There was an error submitting your RSVP.");
     }
+    setLoading(false);
   };
 
   return (
@@ -123,10 +128,7 @@ export default function Home() {
               inputMode="numeric"
               maxLength={10}
               value={phone}
-              onChange={(e) => {
-                const onlyDigits = e.target.value.replace(/[^0-9]/g, "");
-                setPhone(onlyDigits);
-              }}
+              onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ""))}
               required
             />
             <select
@@ -159,9 +161,10 @@ export default function Home() {
             />
             <button
               onClick={handleRSVP}
-              className="w-full bg-[#2f472f] text-white p-2 rounded text-lg hover:bg-green-900"
+              className="w-full bg-[#2f472f] text-white p-2 rounded text-lg hover:bg-green-900 disabled:opacity-50"
+              disabled={loading}
             >
-              RSVP
+              {loading ? 'Submitting...' : 'RSVP'}
             </button>
           </div>
         ) : (
