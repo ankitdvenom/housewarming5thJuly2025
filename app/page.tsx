@@ -192,6 +192,9 @@ export default function Home() {
       <Link href="/details" className="text-blue-700 underline text-sm mt-4">
         More info & updates ↗
       </Link>
+          <Link href="/" className="text-blue-700 underline text-sm mt-2">
+        ← Back to Home
+      </Link>
     </div>
   );
 }
