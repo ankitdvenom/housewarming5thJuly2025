@@ -118,14 +118,17 @@ export default function Home() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
+            <<input
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="e.g. 0444567890"
-              type="tel"
+              type="text"
+              pattern="[0-9]{10}"
               maxLength={10}
+              inputMode="numeric"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ""))}
             />
+
             <input
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="Number of Guests"
