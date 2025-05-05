@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   const [joining, setJoining] = useState("");
+  const [kids, setKids] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -34,7 +35,7 @@ export default function Home() {
   };
 
   const handleRSVP = async () => {
-    if (!name || !email || !phone || !guests || !joining) {
+    if (!name || !email || !phone || !guests || !joining || !kids) {
       alert("Please fill in all the required fields before submitting your RSVP.");
       return;
     }
@@ -61,6 +62,7 @@ export default function Home() {
         guests,
         message,
         joining,
+        kids,
       },
     };
 
@@ -158,6 +160,16 @@ export default function Home() {
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
+            <select
+              className="w-full p-2 border border-[#ccc] rounded"
+              value={kids}
+              onChange={(e) => setKids(e.target.value)}
+              required
+            >
+              <option value="">Will kids join?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
             <textarea
               className="w-full p-2 border border-[#ccc] rounded"
               placeholder="Leave us a message (optional)"
@@ -197,7 +209,7 @@ export default function Home() {
       <Link href="/details" className="text-blue-700 underline text-sm mt-4">
         More info & updates ↗
       </Link>
-          <Link href="/" className="text-blue-700 underline text-sm mt-2">
+      <Link href="/" className="text-blue-700 underline text-sm mt-2">
         ← Back to Home
       </Link>
     </div>
