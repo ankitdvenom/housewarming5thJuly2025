@@ -15,6 +15,10 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleRSVP = async () => {
+    if (!joining) {
+    alert("Please let us know if you will join us.");
+    return;
+  }
     const data = {
   data: {
     name,
@@ -102,6 +106,7 @@ export default function Home() {
               className="w-full p-2 border border-[#ccc] rounded"
               value={joining}
               onChange={(e) => setJoining(e.target.value)}
+              required
             >
               <option value="">Will you join us?</option>
               <option value="Yes">Yes</option>
