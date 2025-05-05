@@ -19,9 +19,14 @@ export default function Home() {
     try {
       const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
       const entries = await response.json();
-      return entries.some(
-        (entry: any) => entry.email.trim().toLowerCase() === email.trim().toLowerCase() || entry.phone.trim() === phone.trim()
-      );
+      return entries.some((entry: any) => {
+        const entryPhone = entry.phone?.trim().replace(/[^0-9]/g, "");
+        const formPhone = phone.trim().replace(/[^0-9]/g, "");
+        return (
+          entry.email?.trim().toLowerCase() === email.trim().toLowerCase() ||
+          entryPhone === formPhone
+        );
+      });
     } catch (error) {
       console.error("Error checking duplicates:", error);
       return false;
