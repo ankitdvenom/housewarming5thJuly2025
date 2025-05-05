@@ -14,9 +14,32 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  const checkDuplicate = async () => {
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
+      const entries = await response.json();
+
+      return entries.some(
+        (entry: any) => entry.email === email || entry.phone === phone
+      );
+    } catch (error) {
+      console.error("Error checking duplicates:", error);
+      return false;
+    }
+  };
+
   const handleRSVP = async () => {
     if (!joining) {
       alert("Please let us know if you will join us.");
+      return;
+    }
+    if (!/^[0-9]{10}$/.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+    const isDuplicate = await checkDuplicate();
+    if (isDuplicate) {
+      alert("You’ve already RSVPed with this email or phone number.");
       return;
     }
 
@@ -28,7 +51,7 @@ export default function Home() {
         guests,
         message,
         joining,
-      }
+      },
     };
 
     const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
@@ -90,12 +113,13 @@ export default function Home() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
+           <input
               className="w-full p-2 border border-[#ccc] rounded"
-              placeholder="Your Phone Number"
+              placeholder="e.g. 0444567890"
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              maxLength={10}
             />
             <input
               className="w-full p-2 border border-[#ccc] rounded"
