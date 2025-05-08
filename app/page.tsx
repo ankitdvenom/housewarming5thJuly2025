@@ -18,7 +18,7 @@ export default function Home() {
 
   const checkDuplicate = async () => {
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
+      const response = await fetch("https://sheetdb.io/api/v1/ubkmd6nag649k");
       const entries = await response.json();
       return entries.some((entry: any) => {
         const entryPhone = entry.phone?.trim().replace(/[^0-9]/g, "").replace(/^0+/, "");
@@ -66,7 +66,7 @@ export default function Home() {
       },
     };
 
-    const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
+    const response = await fetch("https://sheetdb.io/api/v1/ubkmd6nag649k", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -100,14 +100,14 @@ export default function Home() {
       />
 
       <div className="text-center text-lg mb-4">
-        Join us for a housewarming party
+        Join us in celebrating the arrival of our daughter and our new home
       </div>
 
       <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-full mb-6">
         <div className="text-center mb-6">
-          <div className="font-semibold">SUNDAY</div>
-          <div className="text-4xl font-bold">JUNE 15</div>
-          <div className="font-semibold">2025 @ 12 PM</div>
+          <div className="font-semibold">SATURDAY</div>
+          <div className="text-4xl font-bold">JULY 5</div>
+          <div className="font-semibold">2025 @ 4 PM</div>
           <p className="mt-2">Ketokivenkaari 22, Helsinki 00710</p>
         </div>
 
@@ -202,7 +202,7 @@ export default function Home() {
 
       <div className="text-sm text-center mb-10">
         Hosted by Ankit & Shweta <br />
-        Kindly RSVP before 5<sup>th</sup> June ’25 on <br />
+        Kindly RSVP before 21<sup>th</sup> June ’25 on <br />
         0453278211 / 0404894432
       </div>
 
