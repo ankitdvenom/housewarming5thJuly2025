@@ -15,7 +15,7 @@ export default function RsvpListPage() {
   const [rsvps, setRsvps] = useState<RSVP[]>([]);
 
   useEffect(() => {
-    fetch("https://sheetdb.io/api/v1/ubkmd6nag649k")
+    fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt")
       .then(res => res.json())
       .then(data => setRsvps(data));
   }, []);
