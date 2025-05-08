@@ -21,8 +21,8 @@ export default function Home() {
       const response = await fetch("https://sheetdb.io/api/v1/ubkmd6nag649k");
       const entries = await response.json();
       return entries.some((entry: any) => {
-        const entryPhone = entry.phone?.trim().replace(/[^0-9]/g, "").replace(/^0+/, "");
-        const formPhone = phone.trim().replace(/[^0-9]/g, "").replace(/^0+/, "");
+        const entryPhone = entry.phone?.trim().replace(/[^0-9]/g, "");
+        const formPhone = phone.trim().replace(/[^0-9]/g, "");
         return (
           entry.email?.trim().toLowerCase() === email.trim().toLowerCase() ||
           entryPhone === formPhone
