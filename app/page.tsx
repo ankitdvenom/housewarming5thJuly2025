@@ -93,7 +93,7 @@ export default function Home() {
       </motion.h2>
 
       <Image
-        src="/IMG-20250505-WA0004 (1).jpg"
+        src="/house.png"
         alt="Family Illustration"
         width={350}
         height={350}
