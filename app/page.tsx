@@ -210,7 +210,7 @@ export default function Home() {
 
       <div className="text-sm text-center mb-10">
         Hosted by Ankit & Shweta <br />
-        Kindly RSVP before 5<sup>th</sup> June ’25 on <br />
+        Kindly RSVP before 25<sup>th</sup> June ’25 on <br />
         0453278211 / 0404894432
       </div>
 
