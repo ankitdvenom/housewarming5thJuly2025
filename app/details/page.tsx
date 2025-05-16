@@ -9,12 +9,12 @@ export default function DetailsPage() {
         <h1 className="text-4xl font-bold mb-4">More Info & Updates</h1>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">🚗 Food Menu</h2>
-          <p>We will share the menu closer to the event, stay tuned!!.</p>
+          <h2 className="text-2xl font-semibold mb-2">🌮 Food Menu</h2>
+          <p>We will share the party agenda to the event, stay tuned!!.</p>
         </div>
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
-          <p>Street parking is available accross the street.</p>
+          <p>Street parking is available across the street but we recommend you use public transport so that we could drink without worry</p>
         </div>
 
         <div className="mb-8">
