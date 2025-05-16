@@ -18,7 +18,7 @@ export default function Home() {
 
   const checkDuplicate = async () => {
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt");
+      const response = await fetch("https://sheetdb.io/api/v1/ubkmd6nag649k");
       const entries = await response.json();
       return entries.some((entry: any) => {
         const entryPhone = entry.phone?.trim().replace(/[^0-9]/g, "").replace(/^0+/, "");
@@ -66,7 +66,7 @@ export default function Home() {
       },
     };
 
-    const response = await fetch("https://sheetdb.io/api/v1/19oi6kobu2sjt", {
+    const response = await fetch("https://sheetdb.io/api/v1/ubkmd6nag649k", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -105,10 +105,10 @@ export default function Home() {
 
       <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-full mb-6">
         <div className="text-center mb-6">
-          <div className="font-semibold">SUNDAY</div>
-          <div className="text-4xl font-bold">JUNE 15</div>
-          <div className="font-semibold">2025 @ 12 PM</div>
-          <p className="mt-2">Ketokivenkaari 22, Helsinki 00710</p>
+          <div className="font-semibold">SATURDAY</div>
+          <div className="text-4xl font-bold">JULY 5</div>
+          <div className="font-semibold">2025 @ 4 PM</div>
+          <p className="mt-2">Ketokivenkaari 22, Helsinki, 00710</p>
         </div>
 
         {!submitted ? (
@@ -147,8 +147,6 @@ export default function Home() {
               <option value="">Number of Guests</option>
               <option value="1">1</option>
               <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
             </select>
             <select
               className="w-full p-2 border border-[#ccc] rounded"
@@ -166,7 +164,7 @@ export default function Home() {
               onChange={(e) => setKids(e.target.value)}
               required
             >
-              <option value="">Coming with kids?</option>
+              <option value="">Interested in Sauna?</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
