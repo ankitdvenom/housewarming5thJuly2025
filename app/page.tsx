@@ -83,32 +83,33 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#2f472f] flex flex-col items-center justify-start p-6 font-serif">
-      <motion.h1
-        className="text-5xl font-bold mt-6 text-center"
+    <div className="min-h-screen bg-[#7f9471] text-white flex flex-col items-center justify-start p-6 font-serif">
+      <motion.h2
+        className="text-2xl font-bold mt-6 text-center uppercase"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Welcome to our <span className="block text-6xl italic"> New Home</span>
-      </motion.h1>
+        Shit Just Got Real!
+      </motion.h2>
+
       <Image
-        src="/house.png"
-        alt="Housewarming"
-        width={200}
-        height={200}
-        className="my-6"
+        src="/IMG-20250505-WA0004 (1).jpg"
+        alt="Family Illustration"
+        width={350}
+        height={350}
+        className="my-6 rounded-xl"
       />
 
       <div className="text-center text-lg mb-4">
-        Join us for a housewarming party
+        Please join us in celebrating the arrival of our daughter <br />& our new home
       </div>
 
-      <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-full mb-6">
+      <div className="bg-[#f7f5ef] text-[#2f472f] rounded-xl shadow-lg p-6 max-w-xl w-full mb-6">
         <div className="text-center mb-6">
-          <div className="font-semibold">SATURDAY</div>
-          <div className="text-4xl font-bold">JULY 5</div>
-          <div className="font-semibold">2025 @ 4 PM</div>
-          <p className="mt-2">Ketokivenkaari 22, Helsinki, 00710</p>
+          <div className="font-semibold text-xl">Saturday</div>
+          <div className="text-5xl font-bold">05</div>
+          <div className="text-xl font-semibold">July 2025 at 4 PM</div>
+          <p className="mt-2">Ketokivenkaari 22, Helsinki 00710</p>
         </div>
 
         {!submitted ? (
@@ -214,10 +215,10 @@ export default function Home() {
         0453278211 / 0404894432
       </div>
 
-      <Link href="/details" className="text-blue-700 underline text-sm mt-4">
+      <Link href="/details" className="text-white underline text-sm mt-4">
         More info & updates ↗
       </Link>
-      <Link href="/" className="text-blue-700 underline text-sm mt-2">
+      <Link href="/" className="text-white underline text-sm mt-2">
         ← Back to Home
       </Link>
     </div>
