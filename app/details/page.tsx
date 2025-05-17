@@ -13,6 +13,14 @@ export default function DetailsPage() {
           <p>We will share the party agenda closer to the event, stay tuned!!.</p>
         </div>
         <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-2">💃 Dress code</h2>
+          <p> Let's celebrate together in a sunlit summer afternoon, dress up in vibrant casuals...we are thinking shades of green,white and orange.</p>
+        </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-2">🎁 Gifts</h2>
+          <p> Your presence is invaluable for us, but if you wish to bring any gifts please avoid flowers, decoratives and alcohol.</p>
+        </div>
+        <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
           <p>Street parking is available across the street but we recommend you use public transport so that we could drink without worry</p>
         </div>
