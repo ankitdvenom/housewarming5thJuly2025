@@ -107,9 +107,9 @@ export default function Home() {
       <div className="bg-[#f7f5ef] text-[#2f472f] rounded-xl shadow-lg p-6 max-w-xl w-full mb-6">
         <div className="text-center mb-6">
           <div className="font-semibold text-xl">Saturday</div>
-          <div className="text-5xl font-bold">05</div>
-          <div className="text-xl font-semibold">July 2025 at 4 PM</div>
-          <p className="mt-2">Ketokivenkaari 22, Helsinki 00710</p>
+          <div className="text-5xl font-bold">05 July 2025</div>
+          <div className="text-xl font-semibold">at 4 PM</div>
+          <p className="mt-2">Ketokivenkaari 22, Helsinki, 00710</p>
         </div>
 
         {!submitted ? (
