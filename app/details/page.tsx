@@ -10,7 +10,7 @@ export default function DetailsPage() {
 
         <details className="border rounded p-4 mb-6">
           <summary className="cursor-pointer font-semibold text-lg">
-            📅 Event Schedule (Click to expand)
+          🌮 The Plan (Click to expand)
           </summary>
           <div className="mt-4 space-y-3 text-left text-sm">
             <p>🕓 <strong>16:00 – 17:00 | WELCOME & SOCIAL START</strong><br/>
@@ -40,14 +40,9 @@ export default function DetailsPage() {
             <p>👩‍🍼 Mama & Siya go to bed soon after 😴😛</p>
             <p>🍱 <strong>Food:</strong> We will have a couple of appetizers, sweet & savoury 🥕🌽🥒🍩🥯🧀</p>
             <p>🍻 <strong>Drinks:</strong> Some drinks provided, feel free to bring your own 🥃🍸</p>
-            <p>😎 <strong>Dress code:</strong> Summer shades of orange, white, or green 🌻🧡🤍</p>
+            <p>🤩Bring in your party energy, good vibes and don't forget to dress up in summer shades of orange,white or green 🌻🧡🤍</p>
           </div>
         </details>
-
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">🌮 The Plan</h2>
-          <p>We will share the party agenda closer to the event, stay tuned!!.</p>
-        </div>
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">💃 Dress code</h2>
