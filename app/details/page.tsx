@@ -91,9 +91,19 @@ export default function DetailsPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
           <p>
-            Street parking is available across the street but we recommend you use public transport so that we can all drink without worry.
+          Street parking is available across the street, but we recommend you use public transport so that we can all drink without worry.
+          You can view the location on the map here:<br/>
+            <a
+              href="https://maps.app.goo.gl/eq91qGMgAfTKCf3D8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 underline"
+            >
+            → View Parking Location on Google Maps
+            </a>
           </p>
         </div>
+
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">📸 Photos</h2>
