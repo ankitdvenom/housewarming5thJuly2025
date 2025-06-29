@@ -25,7 +25,7 @@ export default function DetailsPage() {
               👩‍💻 A quick game of Kahoot 📱🤙
             </p>
             <p>🕡 <strong>18:30 – 20:00 | SAUNA TIME</strong><br/>
-              🧖‍♀️ Sauna available for those joining 👙🤩
+              🧖‍♀️ Sauna available for those joining (Don't forget to bring your swimwear and towels)👙🤩
             </p>
             <p>🕖 <strong>19:00 – 20:30 | BEERPONG + CHILL VIBES</strong><br/>
               🍻 What’s a party without Beerpong?<br/>
@@ -56,9 +56,22 @@ export default function DetailsPage() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">🎁 Gifts</h2>
-          <p>Your presence is invaluable for us, but if you wish to bring any gifts please avoid flowers, decoratives and alcohol.</p>
-        </div>
+  <h2 className="text-2xl font-semibold mb-2">🎁 Gifts</h2>
+  <p>
+    Your presence is what truly matters to us. Gifts are completely optional—
+    many friends asked about it, so we are sharing a wishlist here in case you’d like some ideas.
+    Feel free to just come with your good vibes!
+  </p>
+  <a
+    href="https://mywishlist.online/w/sswjzv/ankits-wishlist"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-700 underline inline-block mt-2"
+  >
+    → View Wishlist
+  </a>
+</div>
+
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">🚗 Parking Info</h2>
