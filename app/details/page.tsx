@@ -61,7 +61,18 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">📸 Photos</h2>
-          <p>We'll share a link to Google Photos here for all of us to upload some pictures so that we can relive the memories!</p>
+          <p>
+  We'll share a link to Google Photos here for everyone to upload pictures and relive the memories!<br/>
+  <a
+    href="https://photos.google.com/share/AF1QipOFWtGGaPJX3Dvrds_-DARkKbruEZhbgc0yWybNb7WmB9jeCwFSCmc_K2V7S3N9_w?key=bm5yTTdqYzgxWFF4OVA2Y2R3eDFDa2xrOG5jUVF3"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-700 underline"
+  >
+    → View Shared Album
+  </a>
+</p>
+
         </div>
 
         <Link href="/" className="mt-6 inline-block text-blue-700 underline">
