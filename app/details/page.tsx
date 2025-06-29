@@ -46,7 +46,13 @@ export default function DetailsPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">💃 Dress code</h2>
-          <p>Let's celebrate together in a sunlit summer afternoon, dress up in vibrant casuals...we are thinking shades of green, white and orange.</p>
+          <p>
+  Let's celebrate together in a sunlit summer afternoon, dress up in vibrant casuals...we are thinking shades of
+  <span className="font-semibold" style={{ color: "green" }}> green</span>,
+  <span className="font-semibold" style={{ color: "orange" }}> orange</span>, and
+  <span className="font-semibold" style={{ color: "gray" }}> white</span>.
+</p>
+
         </div>
 
         <div className="mb-8">
@@ -62,7 +68,7 @@ export default function DetailsPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">📸 Photos</h2>
           <p>
-  We'll share a link to Google Photos here for everyone to upload pictures and relive the memories!<br/>
+  Please find a link to Google Photos here for everyone to upload pictures and relive the memories!<br/>
   <a
     href="https://photos.google.com/share/AF1QipOFWtGGaPJX3Dvrds_-DARkKbruEZhbgc0yWybNb7WmB9jeCwFSCmc_K2V7S3N9_w?key=bm5yTTdqYzgxWFF4OVA2Y2R3eDFDa2xrOG5jUVF3"
     target="_blank"
